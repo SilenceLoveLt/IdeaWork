@@ -1,5 +1,6 @@
 package com.yyk;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
@@ -9,6 +10,7 @@ import org.springframework.cache.annotation.EnableCaching;
  * 加上@EnableCaching 使用redis
  */
 @SpringBootApplication
+@MapperScan({ "com.yyk.dao"})
 @EnableCaching
 public class Application {
 

@@ -1,8 +1,12 @@
 package com.yyk.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User  implements Serializable {
+
+    private static final long serialVersionUID = 7612457250204876518L;
+
     private String userId;
 
     private Integer id;
