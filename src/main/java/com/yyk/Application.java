@@ -13,10 +13,12 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @MapperScan({ "com.yyk.dao"})
 @EnableCaching
-public class Application {
+public class Application  {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+
+
 }
 

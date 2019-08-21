@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 @Controller
 @RequestMapping("/test/")
-public class TestController {
+public class RedisTestController {
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
@@ -31,7 +32,7 @@ public class TestController {
 
     @RequestMapping("show")
     public String show(){
-        return "test";
+        return "redisTest";
     }
 
     /**
@@ -39,6 +40,7 @@ public class TestController {
      * @param id
      * @return
      */
+    @ResponseBody
     @RequestMapping("redis")
     public List<User> findOne(Integer id) {
         String key = getKey();

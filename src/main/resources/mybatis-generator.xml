@@ -5,7 +5,7 @@
 <generatorConfiguration>
     <properties resource="application.properties"></properties>
     <!--数据库驱动-->
-    <classPathEntry    location="D:\WorkSettingXML\repository\mysql\mysql-connector-java-5.1.24.jar"/>
+    <classPathEntry    location="C:\mysql\mysql-connector-java-5.1.24.jar"/>
     <context id="DB2Tables"    targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressDate" value="true"/>

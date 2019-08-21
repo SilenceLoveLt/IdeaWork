@@ -36,6 +36,23 @@ spring:
     host: 127.0.0.1
     port: 6379
     timeout: 0
+      # 配置模版引擎
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    enabled: true
+    encoding: utf-8
+    mode: HTML
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+
 #pagehelper
 pagehelper:
   helperDialect: mysql
@@ -56,3 +73,4 @@ swagger:
   contact:
     name: blaze
     email: yangyukun@n22.com.com
+
