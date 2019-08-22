@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +8,14 @@
 
 </head>
 
-<!-- 获取根路径 -->
-<script type="text/javascript" th:inline="javascript">
-    /*<![CDATA[*/
-    ctxPath = /*[[@{/}]]*/ '';
-    /*]]>*/
-    console.info("ctxPath="+ctxPath);
-</script>
+<!--js-->
+<script  th:src="@{/static/js/jquery.js}" type="text/javascript"></script>
+<script  th:src="@{/static/js/jquery.min.js}" type="text/javascript"></script>
+<script  th:src="@{/static/bootstrap/js/bootstrap.js}" type="text/javascript"></script>
 
+<!--css-->
+<link  th:href="@{/static/bootstrap/css/bootstrap.css}" />
 
-<script  th:src="@{/js/jquery.js}"  type="text/javascript"></script>
-<script  th:src="@{/js/jquery.dataTables.js}" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" th:href="@{/css/jquery.dataTables.css}"/>
 
 <body>
     <form action="/file/fileUpload" method="post" enctype="multipart/form-data">
@@ -28,7 +24,9 @@
         <input type="submit" value="上传"/>
     </form>
     <p>图片:</p>
-    <img th:src="@{/image/46016503.jpg}"  width="100px" height="50px" />
+    <img th:src="${filename}"  width="100px" height="50px" />
+
+
     <script type="text/javascript">
         var filename = "[[${filename}]]";
         console.info("filename"+filename);

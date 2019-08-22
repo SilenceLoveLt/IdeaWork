@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
@@ -15,10 +16,16 @@ import java.io.IOException;
 @RequestMapping("/file/")
 public class FileTestController {
 
-    @RequestMapping("show")
+    /*@RequestMapping("show")
     public  String show(){
         return "fileTest";
+    }*/
+
+    @RequestMapping("show")
+    public ModelAndView show(){
+        return new ModelAndView("fileTest");
     }
+
 
     @RequestMapping("fileUpload")
     public String fileUpload(@RequestParam(value="file")MultipartFile file, Model model, HttpServletRequest request){

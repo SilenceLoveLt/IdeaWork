@@ -19,7 +19,6 @@ spring:
       initial-size: 1
       min-idle: 1
       max-active: 20
-      #获取连接等待超时时间
       max-wait: 60000
       #间隔多久进行一次检测，检测需要关闭的空闲连接
       time-between-eviction-runs-millis: 60000
@@ -36,7 +35,7 @@ spring:
     host: 127.0.0.1
     port: 6379
     timeout: 0
-      # 配置模版引擎
+    # 配置模版引擎
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
@@ -45,12 +44,12 @@ spring:
     encoding: utf-8
     mode: HTML
   mvc:
-    view:
       prefix: /templates/
+        #获取连接等待超时时间
       suffix: .html
-    static-path-pattern: /static/**
+      static-path-pattern: /static/**
   resources:
-    static-locations: classpath:/static/
+    static-locations: classpath:/static/, classpath:/templates/,classpath:/resources/
 
 
 #pagehelper
@@ -73,4 +72,5 @@ swagger:
   contact:
     name: blaze
     email: yangyukun@n22.com.com
+
 
