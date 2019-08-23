@@ -3,6 +3,7 @@ package com.yyk.controller;
 import com.yyk.entity.User;
 import com.yyk.entity.UserExample;
 import com.yyk.service.UserService;
+import com.yyk.util.Url;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RequestMapping("/stream/")
+@RequestMapping(Url.STREAM_MANAGE)
 @Controller
 public class StreamTestController {
     @Autowired
@@ -22,13 +23,14 @@ public class StreamTestController {
 
 
 
-    @RequestMapping("show")
+    @RequestMapping(Url.SHOW)
     public String show(){
         return "streamTest";
     }
 
+
     @ResponseBody
-    @RequestMapping("filter")
+    @RequestMapping(Url.STREAM_FILTER)
     public List<User> filter(){
         UserExample example=new UserExample();
         UserExample.Criteria cri=example.createCriteria();
@@ -42,7 +44,7 @@ public class StreamTestController {
     }
 
     @ResponseBody
-    @RequestMapping("foreach")
+    @RequestMapping(Url.STREAM_FOREACH)
     public List<String> foreach(){
         UserExample example=new UserExample();
         UserExample.Criteria cri=example.createCriteria();

@@ -1,6 +1,7 @@
 package com.yyk.controller;
 
 
+import com.yyk.util.Url;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,21 +14,19 @@ import java.io.File;
 import java.io.IOException;
 
 @Controller
-@RequestMapping("/file/")
+@RequestMapping(Url.FILE_MANAGE)
 public class FileTestController {
 
-    /*@RequestMapping("show")
-    public  String show(){
-        return "fileTest";
-    }*/
 
-    @RequestMapping("show")
+
+
+    @RequestMapping(Url.SHOW)
     public ModelAndView show(){
         return new ModelAndView("fileTest");
     }
 
 
-    @RequestMapping("fileUpload")
+    @RequestMapping(Url.FILE_UPLOAD)
     public String fileUpload(@RequestParam(value="file")MultipartFile file, Model model, HttpServletRequest request){
         if(file.isEmpty()){
             return "文件为空";
@@ -37,17 +36,18 @@ public class FileTestController {
         //String suffixName = fileName.substring(fileName.lastIndexOf("."));  // 后缀名
         String filePath = "C://temp-rainy//"; // 上传后的路径
        // fileName = UUID.randomUUID() + suffixName; // 新文件名
-        File dest = new File(filePath + fileName);
+        File dest = new File(filePath + fileName); //根目录+文件目录
         if (!dest.getParentFile().exists()) {
-            dest.getParentFile().mkdirs();
+            dest.getParentFile().mkdirs(); //创建根目录
         }
         try {
-            file.transferTo(dest);
+            file.transferTo(dest); //实现文件上传
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String filename = "/temp-rainy/" + fileName;
+        String filename = "file:///"+"C:/temp-rainy/" + fileName;
         model.addAttribute("filename", filename);
         return "fileTest";
+
     }
 }

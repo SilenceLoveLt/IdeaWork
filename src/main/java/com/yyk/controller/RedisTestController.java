@@ -3,6 +3,7 @@ package com.yyk.controller;
 import com.yyk.entity.User;
 import com.yyk.entity.UserExample;
 import com.yyk.service.UserService;
+import com.yyk.util.Url;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -11,11 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Controller
-@RequestMapping("/test/")
+@RequestMapping(Url.REDIS_MANAGE)
 public class RedisTestController {
 
     @Resource
@@ -30,7 +32,7 @@ public class RedisTestController {
 
 
 
-    @RequestMapping("show")
+    @RequestMapping(Url.SHOW)
     public String show(){
         return "redisTest";
     }
@@ -41,7 +43,7 @@ public class RedisTestController {
      * @return
      */
     @ResponseBody
-    @RequestMapping("redis")
+    @RequestMapping(Url.REDIS_SELECT)
     public List<User> findOne(Integer id) {
         String key = getKey();
         // 缓存存在
