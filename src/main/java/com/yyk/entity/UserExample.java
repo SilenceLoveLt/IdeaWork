@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+
 public class UserExample {
     protected String orderByClause;
 
@@ -262,76 +263,6 @@ public class UserExample {
             return (Criteria) this;
         }
 
-        public Criteria andUserCodeIsNull() {
-            addCriterion("USER_CODE is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeIsNotNull() {
-            addCriterion("USER_CODE is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeEqualTo(String value) {
-            addCriterion("USER_CODE =", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeNotEqualTo(String value) {
-            addCriterion("USER_CODE <>", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeGreaterThan(String value) {
-            addCriterion("USER_CODE >", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeGreaterThanOrEqualTo(String value) {
-            addCriterion("USER_CODE >=", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeLessThan(String value) {
-            addCriterion("USER_CODE <", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeLessThanOrEqualTo(String value) {
-            addCriterion("USER_CODE <=", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeLike(String value) {
-            addCriterion("USER_CODE like", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeNotLike(String value) {
-            addCriterion("USER_CODE not like", value, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeIn(List<String> values) {
-            addCriterion("USER_CODE in", values, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeNotIn(List<String> values) {
-            addCriterion("USER_CODE not in", values, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeBetween(String value1, String value2) {
-            addCriterion("USER_CODE between", value1, value2, "userCode");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserCodeNotBetween(String value1, String value2) {
-            addCriterion("USER_CODE not between", value1, value2, "userCode");
-            return (Criteria) this;
-        }
-
         public Criteria andUserNameIsNull() {
             addCriterion("USER_NAME is null");
             return (Criteria) this;
@@ -399,76 +330,6 @@ public class UserExample {
 
         public Criteria andUserNameNotBetween(String value1, String value2) {
             addCriterion("USER_NAME not between", value1, value2, "userName");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdIsNull() {
-            addCriterion("USER_PWD is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdIsNotNull() {
-            addCriterion("USER_PWD is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdEqualTo(String value) {
-            addCriterion("USER_PWD =", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdNotEqualTo(String value) {
-            addCriterion("USER_PWD <>", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdGreaterThan(String value) {
-            addCriterion("USER_PWD >", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdGreaterThanOrEqualTo(String value) {
-            addCriterion("USER_PWD >=", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdLessThan(String value) {
-            addCriterion("USER_PWD <", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdLessThanOrEqualTo(String value) {
-            addCriterion("USER_PWD <=", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdLike(String value) {
-            addCriterion("USER_PWD like", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdNotLike(String value) {
-            addCriterion("USER_PWD not like", value, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdIn(List<String> values) {
-            addCriterion("USER_PWD in", values, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdNotIn(List<String> values) {
-            addCriterion("USER_PWD not in", values, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdBetween(String value1, String value2) {
-            addCriterion("USER_PWD between", value1, value2, "userPwd");
-            return (Criteria) this;
-        }
-
-        public Criteria andUserPwdNotBetween(String value1, String value2) {
-            addCriterion("USER_PWD not between", value1, value2, "userPwd");
             return (Criteria) this;
         }
 

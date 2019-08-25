@@ -7,11 +7,7 @@ public class User {
 
     private Integer id;
 
-    private String userCode;
-
     private String userName;
-
-    private String userPwd;
 
     private String userPhone;
 
@@ -41,28 +37,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserCode() {
-        return userCode;
-    }
-
-    public void setUserCode(String userCode) {
-        this.userCode = userCode == null ? null : userCode.trim();
-    }
-
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
-    }
-
-    public String getUserPwd() {
-        return userPwd;
-    }
-
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd == null ? null : userPwd.trim();
     }
 
     public String getUserPhone() {
